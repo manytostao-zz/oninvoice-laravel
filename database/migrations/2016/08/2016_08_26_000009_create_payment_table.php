@@ -18,8 +18,9 @@ class CreatePaymentTable extends Migration
             $table->longText('note')->nullable()->default(NULL)->comment('Payment note.');
             $table->integer('invoice_id')->comment('Payment invoice reference.');
             $table->integer('payment_method_id')->comment('Payment method reference.');
+            $table->timestamps();
 
-            $table->foreign('payment_method_id')->references('id')->on('invoice')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('invoice_id', 'payment_invoice_fk')->references('id')->on('invoice')->onDelete('no action')->onUpdate('no action');
         });
     }
 

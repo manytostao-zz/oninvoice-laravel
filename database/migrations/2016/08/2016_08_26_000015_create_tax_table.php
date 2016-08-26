@@ -16,22 +16,23 @@ class CreateTaxTable extends Migration
             $table->increments('id')->comment('Table identifier.');
             $table->string('name', 45)->comment('Tax name.');
             $table->decimal('percentage', 10, 2)->comment('Tax percentage.');
+            $table->timestamps();
         });
 
         Schema::table('invoice_item', function (Blueprint $table) {
-            $table->foreign('tax_id')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('tax_id', 'invoice_item_tax_fk')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
         });
 
         Schema::table('invoice_tax', function (Blueprint $table) {
-            $table->foreign('invoice_tax_id')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('invoice_tax_id', 'invoice_taxt_tax_fk')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
         });
 
         Schema::table('quote_item', function (Blueprint $table) {
-            $table->foreign('tax_id')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('tax_id', 'quote_item_tax_fk')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
         });
 
         Schema::table('quote_tax', function (Blueprint $table) {
-            $table->foreign('quote_tax_id')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('quote_tax_id', 'quote_tax_tax_fk')->references('id')->on('tax')->onDelete('no action')->onUpdate('no action');
         });
 
     }

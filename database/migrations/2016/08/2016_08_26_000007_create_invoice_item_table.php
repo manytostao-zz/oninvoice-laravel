@@ -19,8 +19,9 @@ class CreateInvoiceItemTable extends Migration
             $table->integer('invoice_id')->comment('Invoice item invoice reference.');
             $table->integer('product_id')->comment('Invoice item product reference.');
             $table->integer('tax_id')->comment('Invoice item tax reference.');
+            $table->timestamps();
 
-            $table->foreign('invoice_id')->references('id')->on('invoice')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('invoice_id', 'invoice_item_invoice_fk')->references('id')->on('invoice')->onDelete('no action')->onUpdate('no action');
         });
     }
 

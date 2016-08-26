@@ -25,6 +25,7 @@ class CreateUserTable extends Migration
             $table->decimal('fax', 10, 0)->nullable()->default(NULL);
             $table->decimal('movil', 10, 0)->nullable()->default(NULL);
             $table->tinyInteger('active')->nullable()->default(NULL);
+            $table->timestamps();
         });
     }
 

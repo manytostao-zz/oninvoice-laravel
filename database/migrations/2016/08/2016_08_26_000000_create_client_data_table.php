@@ -15,6 +15,7 @@ class CreateClientDataTable extends Migration
         Schema::create('client_data', function (Blueprint $table) {
             $table->increments('id')->comment('Table identifier.');
             $table->integer('currency_id')->nullable()->default(NULL)->comment('Default currency associated to the client.');
+            $table->timestamps();
         });
     }
 

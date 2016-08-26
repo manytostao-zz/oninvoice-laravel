@@ -19,10 +19,11 @@ class CreateDocumentTypeConfTable extends Migration
             $table->string('prefix', 10)->comment('Docuent type prefix.');
             $table->integer('digits')->comment('Document type consecutive digits ammount.');
             $table->integer('consecutive')->comment('Document type consecutive.');
-            $table->tinyInteger('year')->default('0')->comment('Specifies wether the document type configuration will use the year. 1 - Will use it, 0 - Won't use it.');
-            $table->tinyInteger('month')->default('0')->comment('Specifies wether the document type configuration will use the month. 1 - Will use it, 0 - Won't use it.');
+            $table->tinyInteger('year')->default('0')->comment("Specifies wether the document type configuration will use the year. 1 - Will use it, 0 - Won't use it.");
+            $table->tinyInteger('month')->default('0')->comment("Specifies wether the document type configuration will use the month. 1 - Will use it, 0 - Won't use it.");
+            $table->timestamps();
 
-            $table->foreign('document_type_id')->references('id')->on('document_type')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('document_type_id', 'document_type_fk')->references('id')->on('document_type')->onDelete('no action')->onUpdate('no action');
         });
     }
 

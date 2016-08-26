@@ -16,10 +16,11 @@ class CreatePaymentMethodTable extends Migration
             $table->increments('id')->comment('Table identifier.');
             $table->string('code', 5)->comment('Payment method code.');
             $table->string('description', 45)->comment('Payment description code.');
+            $table->timestamps();
         });
 
         Schema::table('payment', function (Blueprint $table) {
-            $table->foreign('payment_method_id')->references('id')->on('payment_method')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('payment_method_id', 'payment_method_fk')->references('id')->on('payment_method')->onDelete('no action')->onUpdate('no action');
         });
 
     }

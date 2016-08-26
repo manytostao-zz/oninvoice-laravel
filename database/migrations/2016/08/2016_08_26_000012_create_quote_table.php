@@ -24,10 +24,11 @@ class CreateQuoteTable extends Migration
             $table->integer('doc_type_conf_status')->comment('Quote document type configuration status.');
             $table->integer('client_id')->comment('Quote client.');
             $table->integer('user_id')->comment('Quote user.');
+            $table->timestamps();
 
-            $table->foreign('currency_id')->references('id')->on('currency')->onDelete('no action')->onUpdate('no action');
-            $table->foreign('doc_type_conf_id')->references('id')->on('document_type_conf')->onDelete('no action')->onUpdate('no action');
-            $table->foreign('doc_type_conf_status')->references('id')->on('document_type_conf_status')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('currency_id', 'quote_currency_fk')->references('id')->on('currency')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('doc_type_conf_id', 'quote_doc_type_conf_fk')->references('id')->on('document_type_conf')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('doc_type_conf_status', 'quote_doc_type_conf_status_fk')->references('id')->on('document_type_conf_status')->onDelete('no action')->onUpdate('no action');
         });
     }
 

@@ -16,6 +16,7 @@ class CreateDocumentTypeTable extends Migration
             $table->increments('id')->comment('Table identifier.');
             $table->string('code', 5)->comment('Document type code.');
             $table->string('description', 45)->comment('Document type description.');
+            $table->timestamps();
         });
     }
 

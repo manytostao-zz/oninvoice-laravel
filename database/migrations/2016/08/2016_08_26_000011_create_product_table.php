@@ -17,10 +17,11 @@ class CreateProductTable extends Migration
             $table->string('name', 45)->comment('Product name.');
             $table->longText('description')->comment('Product description.');
             $table->float('price')->comment('Product price.');
+            $table->timestamps();
         });
 
         Schema::table('invoice_item', function (Blueprint $table) {
-            $table->foreign('product_id')->references('id')->on('product')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('product_id', 'invoice_item_product_fk')->references('id')->on('product')->onDelete('no action')->onUpdate('no action');
         });
 
     }

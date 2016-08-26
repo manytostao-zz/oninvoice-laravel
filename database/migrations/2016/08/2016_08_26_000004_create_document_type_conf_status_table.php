@@ -16,8 +16,9 @@ class CreateDocumentTypeConfStatusTable extends Migration
             $table->increments('id')->comment('Table identifier.');
             $table->integer('document_type_conf_id')->comment('Document type configuration reference.');
             $table->integer('document_type_status_id')->comment('Document type state reference.');
+            $table->timestamps();
 
-            $table->foreign('document_type_conf_id')->references('id')->on('document_type_conf')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('document_type_conf_id', 'document_type_comf_fk')->references('id')->on('document_type_conf')->onDelete('no action')->onUpdate('no action');
         });
     }
 

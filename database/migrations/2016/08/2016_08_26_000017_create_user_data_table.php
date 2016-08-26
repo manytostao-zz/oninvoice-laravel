@@ -24,16 +24,17 @@ class CreateUserDataTable extends Migration
             $table->decimal('fax', 10, 0)->nullable()->default(NULL);
             $table->decimal('movil', 10, 0)->nullable()->default(NULL);
             $table->integer('client_data_id')->nullable()->default(NULL)->comment('Client data associated to the user. If not null, the user is a client.');
+            $table->timestamps();
 
-            $table->foreign('client_data_id')->references('id')->on('client_data')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('client_data_id', 'user_data_client_data_fk')->references('id')->on('client_data')->onDelete('no action')->onUpdate('no action');
         });
 
         Schema::table('invoice', function (Blueprint $table) {
-            $table->foreign('client_id')->references('id')->on('user_data')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('client_id', 'invoice_client_fk')->references('id')->on('user_data')->onDelete('no action')->onUpdate('no action');
         });
 
         Schema::table('quote', function (Blueprint $table) {
-            $table->foreign('client_id')->references('id')->on('user_data')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('client_id', 'quote_client_fk')->references('id')->on('user_data')->onDelete('no action')->onUpdate('no action');
         });
 
     }

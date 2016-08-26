@@ -22,10 +22,11 @@ class CreateCurrencyTable extends Migration
             $table->char('thousands_separator', 1)->comment('Sign used to separate the milliards parts of a currency value.');
             $table->decimal('rate', 10, 7)->nullable()->default(NULL)->comment('Conversion rate of a currency regarding the base currency.');
             $table->tinyInteger('base')->default('0')->comment('Specifies wether the currency is the base used throughout the entire application. The rate of the other currencies will be in regards to this one. 1 - Base, 0 - Not base.');
+            $table->timestamps();
         });
 
         Schema::table('client_data', function (Blueprint $table) {
-            $table->foreign('currency_id')->references('id')->on('currency')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('currency_id', 'client_data_currency_fk')->references('id')->on('currency')->onDelete('no action')->onUpdate('no action');
         });
 
     }

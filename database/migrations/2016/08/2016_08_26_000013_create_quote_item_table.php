@@ -19,9 +19,10 @@ class CreateQuoteItemTable extends Migration
             $table->integer('quote_id')->comment('Quote item invoice reference.');
             $table->integer('product_id')->comment('Quote item product reference.');
             $table->integer('tax_id')->comment('Quote item tax reference.');
+            $table->timestamps();
 
-            $table->foreign('quote_id')->references('id')->on('quote')->onDelete('no action')->onUpdate('no action');
-            $table->foreign('product_id')->references('id')->on('product')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('quote_id', 'quote_item_quote_fk')->references('id')->on('quote')->onDelete('no action')->onUpdate('no action');
+            $table->foreign('product_id', 'quote_item_product_fk')->references('id')->on('product')->onDelete('no action')->onUpdate('no action');
         });
     }
 
