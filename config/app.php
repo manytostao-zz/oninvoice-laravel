@@ -140,11 +140,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
-        Jaybizzle\MigrationsOrganiser\MigrationsOrganiserServiceProvider::class,
+        OnInvoice\Providers\AppServiceProvider::class,
+        OnInvoice\Providers\AuthServiceProvider::class,
+        OnInvoice\Providers\EventServiceProvider::class,
+        OnInvoice\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
         Sven\ArtisanView\ArtisanViewServiceProvider::class,
@@ -198,6 +197,12 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+        'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        'HTML' => Collective\Html\HtmlFacade::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Activation' => Cartalyst\Sentinel\Laravel\Facades\Activation::class,
+        'Reminder' => Cartalyst\Sentinel\Laravel\Facades\Reminder::class,
+        'Sentinel' => Cartalyst\Sentinel\Laravel\Facades\Sentinel::class,
 
     ],
 

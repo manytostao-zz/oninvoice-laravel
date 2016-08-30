@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace OnInvoice\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

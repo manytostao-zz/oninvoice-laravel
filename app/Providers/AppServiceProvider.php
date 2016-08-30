@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace OnInvoice\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

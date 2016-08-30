@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace OnInvoice\Http\Controllers\Auth;
 
-use App\User;
+use OnInvoice\User;
 use Validator;
-use App\Http\Controllers\Controller;
+use OnInvoice\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

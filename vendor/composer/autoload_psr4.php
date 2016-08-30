@@ -26,10 +26,10 @@ return array(
     'Stringy\\' => array($vendorDir . '/danielstjules/stringy/src'),
     'Psy\\' => array($vendorDir . '/psy/psysh/src/Psy'),
     'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'OnInvoice\\' => array($baseDir . '/app'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Lord\\Laroute\\' => array($vendorDir . '/lord/laroute/src'),
     'League\\Flysystem\\' => array($vendorDir . '/league/flysystem/src'),
-    'Jaybizzle\\MigrationsOrganiser\\' => array($vendorDir . '/jaybizzle/laravel-migrations-organiser/src'),
     'Illuminate\\' => array($vendorDir . '/laravel/framework/src/Illuminate'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
@@ -41,5 +41,4 @@ return array(
     'Cartalyst\\Support\\' => array($vendorDir . '/cartalyst/support/src'),
     'Cartalyst\\Sentinel\\' => array($vendorDir . '/cartalyst/sentinel/src'),
     'Barryvdh\\Debugbar\\' => array($vendorDir . '/barryvdh/laravel-debugbar/src'),
-    'App\\' => array($baseDir . '/app'),
 );

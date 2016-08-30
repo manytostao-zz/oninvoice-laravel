@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace OnInvoice\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\SomeEvent' => [
-            'App\Listeners\EventListener',
+        'OnInvoice\Events\SomeEvent' => [
+            'OnInvoice\Listeners\EventListener',
         ],
     ];
 

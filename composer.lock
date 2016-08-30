@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "178c3543f286c6ffa0f20a2e9fa551e3",
-    "content-hash": "b438b8b34332ae170025b77910abe7e4",
+    "hash": "7b919a2954f4f07e12546c81c5297249",
+    "content-hash": "df57be465f6ba4510949474c9b5491bb",
     "packages": [
         {
             "name": "cartalyst/sentinel",
@@ -2245,59 +2245,6 @@
             "description": "This is the PHP port of Hamcrest Matchers",
             "keywords": [
                 "test"
-            ]
-        },
-        {
-            "name": "jaybizzle/laravel-migrations-organiser",
-            "version": "3.0",
-            "dist": {
-                "type": "zip",
-                "url": "http://localhost:5800//dists/jaybizzle-laravel-migrations-organiser-3.0.zip",
-                "reference": null,
-                "shasum": "10fdc914c5f0bee0cc89e2a532ae775b242d6051"
-            },
-            "require": {
-                "illuminate/support": "5.1.*|5.2.*",
-                "php": ">=5.5.9"
-            },
-            "require-dev": {
-                "illuminate/database": "5.1.*|5.2.*",
-                "illuminate/filesystem": "5.1.*|5.2.*",
-                "mockery/mockery": "~0.9",
-                "nesbot/carbon": "~1.18",
-                "phpunit/phpunit": "~4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Jaybizzle\\MigrationsOrganiser\\": "src/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Beech",
-                    "email": "mbeech@mark-beech.co.uk"
-                },
-                {
-                    "name": "Max King",
-                    "email": "max@kingkreations.co.uk"
-                }
-            ],
-            "description": "A Laravel 5 package to help organise migration files.",
-            "keywords": [
-                "date",
-                "dated",
-                "folder",
-                "laravel",
-                "migrate",
-                "migrations",
-                "organise",
-                "organiser",
-                "organize",
-                "organizer"
             ]
         },
         {

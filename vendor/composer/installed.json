@@ -3556,61 +3556,6 @@
         ]
     },
     {
-        "name": "jaybizzle/laravel-migrations-organiser",
-        "version": "3.0",
-        "version_normalized": "3.0.0.0",
-        "dist": {
-            "type": "zip",
-            "url": "http://localhost:5800//dists/jaybizzle-laravel-migrations-organiser-3.0.zip",
-            "reference": null,
-            "shasum": "10fdc914c5f0bee0cc89e2a532ae775b242d6051"
-        },
-        "require": {
-            "illuminate/support": "5.1.*|5.2.*",
-            "php": ">=5.5.9"
-        },
-        "require-dev": {
-            "illuminate/database": "5.1.*|5.2.*",
-            "illuminate/filesystem": "5.1.*|5.2.*",
-            "mockery/mockery": "~0.9",
-            "nesbot/carbon": "~1.18",
-            "phpunit/phpunit": "~4.0"
-        },
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Jaybizzle\\MigrationsOrganiser\\": "src/"
-            }
-        },
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Mark Beech",
-                "email": "mbeech@mark-beech.co.uk"
-            },
-            {
-                "name": "Max King",
-                "email": "max@kingkreations.co.uk"
-            }
-        ],
-        "description": "A Laravel 5 package to help organise migration files.",
-        "keywords": [
-            "date",
-            "dated",
-            "folder",
-            "laravel",
-            "migrate",
-            "migrations",
-            "organise",
-            "organiser",
-            "organize",
-            "organizer"
-        ]
-    },
-    {
         "name": "laravelcollective/html",
         "version": "5.1",
         "version_normalized": "5.1.0.0",
